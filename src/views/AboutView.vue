@@ -45,9 +45,11 @@ export default {
   data(){
     return {list:undefined}
   },
+  //http://192.168.0.10:8888/api/books
+  //
   //THB//http://192.168.0.100:6555/api/books
   mounted(){
-    Vue.axios.get('http://192.168.0.10:8888/api/books').then(resp=>{
+    Vue.axios.get('http://webapidownloadbooks-dev.us-west-1.elasticbeanstalk.com/api/books').then(resp=>{
      this.list=resp.data;
       
     })
